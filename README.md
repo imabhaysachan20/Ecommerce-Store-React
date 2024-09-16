@@ -22,4 +22,10 @@ This is a fully responsive e-commerce store built using **React**, **Tailwind CS
 - **Tailwind CSS:** Utility-first CSS framework for styling
 - **DaisyUI:** Tailwind CSS component library for pre-built UI elements
 - **React Router DOM:** For managing page navigation and routing
+- **Axios:** For making API requests to fetch featured products
 
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/imabhaysachan20/Ecommerce-Store-React.git
