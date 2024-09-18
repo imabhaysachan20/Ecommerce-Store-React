@@ -3,7 +3,7 @@ import SectionTitle from "./SectionTitle"
 import ProductsGrid from "./ProductsGrid"
 import { useLoaderData } from 'react-router-dom'
 const FeatureProducts = () => {
-  const products = useLoaderData();
+  const {products} = useLoaderData();
   return (
      
     <div className='pt-24'>

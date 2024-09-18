@@ -13,3 +13,4 @@ export const formatPrice = (price)=>{
     }).format((price/100).toFixed(2))
     return dollarAmount
 }
+

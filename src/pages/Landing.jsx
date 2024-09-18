@@ -6,8 +6,9 @@ import { FeatureProducts } from "../components";
 const url = "/products?featured=true"
 
 export const  loader = async()=>{
-  const {data} = await customFetch.get(url);
-  return data.data;   
+  const response = await customFetch.get(url);
+  const products = response.data.data
+  return {products};   
 }
 
 const Landing = () => {
