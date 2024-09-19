@@ -4,6 +4,8 @@ import {generateOptions} from "../utils/utils"
 
 import { useLoaderData ,Link} from 'react-router-dom';
 import {formatPrice} from "../utils/index"
+import { useDispatch } from 'react-redux';
+import {addItem} from "../features/cart/CartSlice"
 
 export const loader = async({params})=>{
   const {id} = params;
@@ -22,6 +24,25 @@ const SingleProduct = () => {
   const handelAmount = (e)=>{
     setAmount(parseInt(e.target.value))
   }
+
+  const cartProduct = {
+    cartId:product.id+productColor,
+    productID:product.id,
+    image,
+    title,
+    price,
+    company,
+    amount,
+    productColor
+  }
+
+  const dispatch = useDispatch()
+
+  const addToCart = ()=>{
+    dispatch(addItem({product:cartProduct}));
+  }
+
+
   return (
     <section>
       <div className="text-md breadcrumbs">
@@ -61,7 +82,7 @@ const SingleProduct = () => {
               </select>
             </div>
             <div className="mt-10">
-              <button className='btn btn-secondary btn-md'>Add To Cart</button>
+              <button onClick={addToCart} className='btn btn-secondary btn-md'>Add To Cart</button>
             </div>
           </div>
         </div>
