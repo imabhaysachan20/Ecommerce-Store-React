@@ -1,6 +1,6 @@
 # E-Commerce Store
 
-This is a fully responsive e-commerce store built using **React**, **Tailwind CSS** with **DaisyUI**, and **React Router DOM** for routing. The project includes features such as authentication (using JWT), guest login, theme switching between light and dark modes, dynamic content fetching for featured products, and advanced product filtering and searching.
+This is a fully responsive e-commerce store built using **React**, **Tailwind CSS** with **DaisyUI**, and **React Router DOM** for routing,**Redux Toolkit** for state management and **React Query** for request caching  The project includes features such as authentication (using JWT), guest login, theme switching between light and dark modes, dynamic content fetching for featured products, and advanced product filtering and searching.
 
 ## Features
 
