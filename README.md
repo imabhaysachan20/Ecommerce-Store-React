@@ -1,10 +1,12 @@
 # E-Commerce Store
 
-This is a fully responsive e-commerce store built using **React**, **Tailwind CSS** with **DaisyUI**, and **React Router DOM** for routing,**Redux Toolkit** for state management and **React Query** for request caching  The project includes features such as authentication (using JWT), guest login, theme switching between light and dark modes, dynamic content fetching for featured products, and advanced product filtering and searching.
+[![E-Commerce Store](https://i.postimg.cc/wBRs2MCZ/asd.png)](https://e-commerce-react-deployed.vercel.app/)
+
+This is a fully responsive e-commerce store built using **React**, **Tailwind CSS** with **DaisyUI**, and **React Router DOM** for routing. The project includes features such as authentication (using JWT), guest login, theme switching between light and dark modes, dynamic content fetching for featured products, and advanced product filtering and searching. **React Query** is used for efficient caching of API requests.
 
 ## Features
 
-- **Responsive Design:** The store is fully responsive and adapts to different screen sizes, ensuring a seamless user experience on both desktop and mobile devices.
+- **Responsive Design:** The store is fully responsive and adapts to different screen sizes.
 - **Routing:** Set up using `React Router DOM` with routes for:
   - `Products`
   - `Single Product Details`
@@ -13,31 +15,33 @@ This is a fully responsive e-commerce store built using **React**, **Tailwind CS
   - `Orders`
   - `Checkout`
   - `Login` and `Register`
-- **Authentication:** 
-  - Full user authentication implemented using **JWT (JSON Web Token)**
-  - Users can log in using email and password or log in as a guest.
-- **Dark Mode & Light Mode:** Integrated theme switching using **DaisyUI** themes, refactored to use **Redux state** for global theme management.
-- **Landing Page:**
-  - **Hero Component:** Contains a heading and a product carousel.
-  - **Featured Products Section:** Dynamically fetched from an API using Axios and cached using **React Query**.
-- **Products Page:**
-  - **Searching and Filtering Options:**
-    - Sort by price
-    - Filter by price range, company, category, and free shipping
-    - **View Options:** Switch between grid or list view for products
-    - Pagination for browsing through multiple products
-    - Data is fetched and cached using **React Query**.
-- **Single Product Details:**
-  - Displays product name, company, description, available colors, and the option to add to cart.
-  - Product details are cached using **React Query**.
-- **Cart Page:**
-  - Allows users to:
-    - Add or remove items
-    - Change item quantity
-    - View total amount, taxes, and shipping charges
-    - If logged in, proceed to checkout; otherwise, log in to continue.
-- **Checkout Page:** 
-  - Users can provide address and required information to place an order.
-  - Checkout data is cached using **React Query**.
-- **Orders Page:**
-  - Displays a list of all user orders, showing the user's name, address, products, cost, and date of the order.
+- **Authentication:** Full user authentication using **JWT**, with options for guest login.
+- **Dark Mode & Light Mode:** Theme switching using **DaisyUI**, managed by **Redux state**.
+- **React Query:** Caches API requests for performance improvement.
+- **Products Page:** Includes searching, filtering, and sorting options, with grid and list view, and pagination.
+- **Cart Page:** Manages cart items, quantity, and total cost, with options to checkout or log in.
+- **Checkout Page:** Places orders after providing necessary user information.
+- **Orders Page:** Displays user orders with pagination.
+- **About Page:** Complete with placeholder lorem text.
+
+## Technologies Used
+
+- **React**
+- **Tailwind CSS** with **DaisyUI**
+- **React Router DOM**
+- **Axios**
+- **Redux Toolkit**
+- **React Query**
+- **JWT Authentication**
+
+## Live Demo
+
+The project is deployed and can be viewed at the following link:
+
+[E-Commerce Store - Live Demo](https://e-commerce-react-deployed.vercel.app/)
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/imabhaysachan20/Ecommerce-Store-React.git
