@@ -7,9 +7,16 @@ import {formatPrice} from "../utils/index"
 import { useDispatch } from 'react-redux';
 import {addItem} from "../features/cart/CartSlice"
 
-export const loader = async({params})=>{
+const singlePageProductQuery = (id)=>{
+return {
+  queryKey:["single product",id],
+  queryFn:async()=>{return await customFetch.get(`/products/${id}`)}
+}
+}
+
+export const loader = (queryClient)=>async({params})=>{
   const {id} = params;
-  const response = await customFetch.get(`/products/${id}`);
+  const response = await queryClient.ensureQueryData(singlePageProductQuery(id));
   const product = response.data.data
   return {product};
 }

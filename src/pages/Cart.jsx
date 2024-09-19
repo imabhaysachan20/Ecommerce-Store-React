@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const Cart = () => {
 
   //
-  const user = null;
+  const user = useSelector((state)=>{return state.userState.user});
   const numItems = useSelector((state)=>state.cartState.numItemsInCart)
 
   if (!numItems) {

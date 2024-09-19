@@ -5,8 +5,13 @@ import { FeatureProducts } from "../components";
 
 const url = "/products?featured=true"
 
-export const  loader = async()=>{
-  const response = await customFetch.get(url);
+const featuredProdcutsQuery = {
+  queryKey:['featuredProducst'],
+  queryFn:()=>customFetch(url)
+}
+
+export const  loader = (queryClient)=>async()=>{
+  const response = await queryClient.ensureQueryData(featuredProdcutsQuery);
   const products = response.data.data
   return {products};   
 }

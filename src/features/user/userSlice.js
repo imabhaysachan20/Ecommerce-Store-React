@@ -15,7 +15,7 @@ const getThemeFromLocalStorage = ()=> {
 
 
  const initialState = {
-    user:{username:'anon'},
+    user:null,
     theme:getThemeFromLocalStorage()
 }
 
@@ -25,10 +25,14 @@ const userSlice = createSlice({
     initialState,
     reducers:{
         loginUser:(state,action)=>{
-            console.log('login');
+            const user = { ...action.payload.user, token: action.payload.jwt };
+            state.user = user;
+            localStorage.setItem('user', JSON.stringify(user));
         },
         logoutUser:(state,action)=>{
-            console.log('logout');
+            state.user= null;
+            localStorage.removeItem("user");
+            toast.success("Logged Out Successfully")
         },
         toggleTheme:(state,action)=>{
             state.theme = state.theme==="light"?themes.dark:themes.light;

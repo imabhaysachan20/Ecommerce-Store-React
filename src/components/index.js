@@ -9,3 +9,7 @@ export {default as PaginationContainer} from "./PaginationContainer"
 export {default as ProductContainer} from "./ProductsContainer"
 export {default as CartItemsList} from "./CartItemList"
 export {default as CartTotal} from "./CartTotal"
+export {default as CheckoutForm} from "./CheckOutForm"
+export {default as OrdersList} from "./OrdersList"
+export {default as ComplexPagination} from "./ComplexPagination"
+
